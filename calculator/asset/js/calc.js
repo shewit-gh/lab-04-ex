@@ -54,7 +54,56 @@ function average(numbers){
 };
 function square(number1){
     return parseInt(number1)  * parseInt(number1)
+};
+
+
+if (parseInt(choice)== 1){
+    noOfnumbers = prompt("How many numbers do you want to add?");
+    for (let i = 0; i<parseInt(noOfnumbers); i++){
+        numbers[i] = prompt("Enter the number")
+    };
+    console.log(" The total sum is : " + addition(numbers));
+
+    
 }
+else if ( parseInt(choice) == 2){
+    number1 = prompt("Enter the first number");
+    number2 = prompt("Enter the second number");
+    console.log("The difference is : " + subtraction(number1, number2));
+
+}
+else if( parseInt(choice) == 3){
+    noOfnumbers = prompt("How many numbers do you want to multiply?");
+    for (let i = 0; i<parseInt(noOfnumbers); i++){
+        numbers[i] = prompt("Enter the number")
+    };
+    console.log("The result is : " + multiplication(numbers));
+
+}
+else if( parseInt(choice) == 4){
+    number1 = prompt("Enter the first number");
+    number2 = prompt("Enter the second number");
+    console.log(" The division reuslt is : " + division(number1, number2));
+
+}
+
+else if( parseInt(choice) == 5){
+    noOfnumbers = prompt("How many numbers do you want to do an average of?");
+    for (let i = 0; i<parseInt(noOfnumbers); i++){
+        numbers[i] = prompt("Enter the number")
+    };
+    console.log("The average is : " + average(numbers));
+
+
+}
+else if( parseInt(choice) == 6){
+    number1 = prompt("Enter the number");
+    console.log( "The square of " + number1 + " is" + " "+ square(number1));
+}
+else{
+    console.log("Incorrect choice")
+
+};
 
 
 
