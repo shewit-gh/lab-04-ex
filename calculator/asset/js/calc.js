@@ -1,16 +1,5 @@
 
 
-var number1;
-var number2;
-var choice;
-var noOfnumbers;
-let numbers = new Array();
-
-
-choice = prompt("please input the number infront of your service choice \n1. Addition \n2. Subtraction \n3. Multiplication \n" + 
-"4. Division \n5. Average \n6. Square" );
-
-
 function addition(numbers){
     sum = 0;
     for (let i = 0; i< numbers.length; i++ ){
@@ -57,6 +46,20 @@ function square(number1){
 };
 
 
+
+(function(){
+    
+var number1;
+var number2;
+var choice;
+var noOfnumbers;
+let numbers = new Array();
+
+
+choice = prompt("please input the number infront of your service choice \n1. Addition \n2. Subtraction \n3. Multiplication \n" + 
+"4. Division \n5. Average \n6. Square" );
+
+    
 if (parseInt(choice)== 1){
     noOfnumbers = prompt("How many numbers do you want to add?");
     for (let i = 0; i<parseInt(noOfnumbers); i++){
@@ -106,6 +109,10 @@ else{
 };
 
 
+
+
+
+})();
 
 
 
