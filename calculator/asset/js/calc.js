@@ -45,6 +45,27 @@ function square(number1){
     return parseInt(number1)  * parseInt(number1)
 };
 
+function maximum(numbers){
+    maxi = parseInt(numbers[0]);
+    for (let i = 0; i < numbers.length; i++){
+        if ( maxi <= numbers[i]){
+            maxi = parseInt(numbers[i]);
+        }
+        
+    }
+    return maxi 
+};
+function minimum(numbers){
+    min = parseInt(numbers[0]);
+    for (let i = 0; i < numbers.length; i++){
+        if ( min >= numbers[i]){
+            min = parseInt(numbers[i]);
+        }
+        
+    }
+    return min
+};
+
 
 
 (function(){
@@ -57,7 +78,7 @@ let numbers = new Array();
 
 
 choice = prompt("please input the number infront of your service choice \n1. Addition \n2. Subtraction \n3. Multiplication \n" + 
-"4. Division \n5. Average \n6. Square" );
+"4. Division \n5. Average \n6. Square \n7.Maximum \n8.Minimum" );
 
     
 if (parseInt(choice)== 1){
@@ -103,6 +124,22 @@ else if( parseInt(choice) == 6){
     number1 = prompt("Enter the number");
     console.log( "The square of " + number1 + " is" + " "+ square(number1));
 }
+else if( parseInt(choice) == 7 ){
+    noOfnumbers = prompt("How many numbers do you want to compare?");
+    for (let i = 0; i<parseInt(noOfnumbers); i++){
+        numbers[i] = prompt("Enter the number")
+    };
+    console.log("The maximum is " + maximum(numbers));
+}
+else if( parseInt(choice) == 8 ){
+    noOfnumbers = prompt("How many numbers do you want to compare?");
+    for (let i = 0; i<parseInt(noOfnumbers); i++){
+        numbers[i] = prompt("Enter the number")
+    };
+    console.log("The minimum is " + minimum(numbers));
+}
+
+
 else{
     console.log("Incorrect choice")
 
